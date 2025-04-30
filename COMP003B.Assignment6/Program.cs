@@ -1,3 +1,10 @@
+/*
+ * Author: Jason Salinas
+ * Course: COMP-003B-L01
+ * Faculty: Jonathan Cruz
+ * Purpose: 6.8 Coding Assignment: Web App with Entity Framework Core 
+ * 
+ */
 namespace COMP003B.Assignment6
 {
     public class Program
