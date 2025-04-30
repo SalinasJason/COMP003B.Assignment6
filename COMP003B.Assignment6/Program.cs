@@ -5,6 +5,9 @@
  * Purpose: 6.8 Coding Assignment: Web App with Entity Framework Core 
  * 
  */
+using COMP003B.Assignment6.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.Assignment6
 {
     public class Program
@@ -15,6 +18,10 @@ namespace COMP003B.Assignment6
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Set up the database context 
+            builder.Services.AddDbContext<WebDevAcademyContext>(options =>
+                options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
 
             var app = builder.Build();
 
