@@ -3,6 +3,7 @@ using COMP003B.Assignment6.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace COMP003B.Assignment6.Migrations
 {
     [DbContext(typeof(WebDevAcademyContext))]
-    partial class WebDevAcademyContextModelSnapshot : ModelSnapshot
+    [Migration("20250501032013_AddPricetoBook")]
+    partial class AddPricetoBook
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

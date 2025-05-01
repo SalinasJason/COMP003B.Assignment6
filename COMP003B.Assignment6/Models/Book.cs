@@ -14,5 +14,7 @@ namespace COMP003B.Assignment6.Models
 
         // Collection navigation property
         public virtual ICollection<BookAuthor>? BookAuthors { get; set; }
+
+        public decimal Price { get; set; } // New property added
     }
 }
