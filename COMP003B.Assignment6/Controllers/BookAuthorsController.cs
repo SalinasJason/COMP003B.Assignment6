@@ -50,7 +50,7 @@ namespace COMP003B.Assignment6.Controllers
         public IActionResult Create()
         {
             ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "Name");
-            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Genre");
+            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Title");
             return View();
         }
 
@@ -68,7 +68,7 @@ namespace COMP003B.Assignment6.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "Name", bookAuthor.AuthorId);
-            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Genre", bookAuthor.BookId);
+            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Title", bookAuthor.BookId);
             return View(bookAuthor);
         }
 
@@ -86,7 +86,7 @@ namespace COMP003B.Assignment6.Controllers
                 return NotFound();
             }
             ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "Name", bookAuthor.AuthorId);
-            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Genre", bookAuthor.BookId);
+            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Title", bookAuthor.BookId);
             return View(bookAuthor);
         }
 
@@ -123,7 +123,7 @@ namespace COMP003B.Assignment6.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "Name", bookAuthor.AuthorId);
-            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Genre", bookAuthor.BookId);
+            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Title", bookAuthor.BookId);
             return View(bookAuthor);
         }
 
