@@ -30,6 +30,18 @@
             @Html.DisplayFor(model => model.Price)
         </dd>
     </dl>
+
+    <!-- Display all of the authors for the book -->
+    <div class="col-md-4">
+        <h4>Authors</h4>
+        <ul>
+            @foreach (Author author in ViewBag.Authors)
+            {
+                <li>@author.Name</li>
+            }
+        </ul>
+    </div>
+
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="BookId" />
