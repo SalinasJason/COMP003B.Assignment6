@@ -18,6 +18,19 @@
         </dd>
     </dl>
 </div>
+
+<!-- Display all the books written by the author -->
+<div class="col-md-4">
+    <h4>Books</h4>
+    <ul>
+        @foreach (Book book in ViewBag.Books)
+        {
+            <li>@book.Title</li>
+        }
+    </ul>
+</div>
+
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.AuthorId">Edit</a> |
     <a asp-action="Index">Back to List</a>
