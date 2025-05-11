@@ -9,6 +9,7 @@
         // Nullable navigation properties
         public virtual Book? Book { get; set; }
         public virtual Author? Author { get; set; }
+        //
 
 
     }
